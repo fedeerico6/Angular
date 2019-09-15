@@ -1,91 +1,16 @@
 <style>
-body{
-  padding-top: 56px;
-}
+  body {
+    padding-top: 56px;
+  }
 </style>
 
-<!-- Navigation -->
-<!--
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <div class="container">
-    <a class="navbar-brand" href="#">Bienvenido</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-      aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home
-            <span class="sr-only">(current)</span>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<div class="container">
+<div class="container-fluid">
   <div class="row">
-    <div class="col-lg-3">
-      <h1 class="my-4">Carrito de compras</h1>
-      <ul class="list-group" id="cart">
-        <li class="list-group-item">Cart</li>
-        <li class="list-group-item">
-          <span>
-            <p>Producto de referencia</p>
-            <button class="btn btn-succes" type="button">X</button>
-          </span>
-        </li>
-        <li class="list-group-item" *ngFor="let cart of carts">
-          <span>
-            <p>{{ cart.name }}</p>
-            <button class="btn btn-succes" type="button">X</button>
-          </span>
-        </li>
-      </ul>
+    <div class="col-md-5">
+      <app-add-product [productList]="products"></app-add-product>
     </div>
-    <div class="col-lg-9">
-      <br><br>
-      <div class="row" id="productList" *ngFor="let product of products">
-        <div class="col-lg-4 col-md-6 mb4">
-          <div class="card h-100">
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="#">{{ product.name }}</a>
-              </h4>
-              <h5>{{ product.price }}</h5>
-              <p class="card-text">{{ product.description }}</p>
-            </div>
-            <div class="card-footer">
-              <button class="btn btn-succes" type="button" onclick="setProductToCart(product)">Add</button>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="col-md-7">
+      <app-list-product [productList]="products"></app-list-product>
     </div>
   </div>
 </div>
--->
-<!--
-   <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">ID</th>
-        <th scope="col">NAME</th>
-        <th scope="col">DESCRIPTION</th>
-        <th scope="col">PRICE</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let product of products">
-        <th class="row">{{ product.id }}</th>
-        <th>{{ product.name }}</th>
-        <th>{{ product.description }}</th>
-        <th>{{ product.price }}</th>
-      </tr>
-    </tbody>
-  </table>
--->
-<app-add-product [productList]="products"></app-add-product>
-<app-list-product [productList]="products"></app-list-product>

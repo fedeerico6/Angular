@@ -1,22 +1,20 @@
-<div class="container">
-    <h2>Agegar nuevo producto</h2>
-    <form>
-        <div class="form-group">
-            <label for="id">ID</label>
-            <input type="text" class="form-control" id="id" [(ngModel)]="id" name="id">
-        </div>
-        <div class="form-group">
-            <label for="name">Nombre</label>
-            <input type="text" class="form-control" id="name" [(ngModel)]="name" name="name">
-        </div>
-        <div class="form-group">
-            <label for="description">Descripcion</label>
-            <input type="text" id="description" class="form-control" [(ngModel)]="description" name="description">
-        </div>
-        <div class="form-group">
-            <label for="price">Precio</label>
-            <input type="text" id="price" class="form-control" [(ngModel)]="price" name="price">
-        </div>
-        <button class="btn btn-primary" type="submit" (click)="add()">Agregar</button>
-    </form>
-</div>
+<h2 style="margin-left: 8%">Agegar nuevo producto</h2>
+<form style="width: 75%">
+    <div class="form-group">
+        <label for="id">ID</label>
+        <input type="text" class="form-control" id="id" [(ngModel)]="id" name="id">
+    </div>
+    <div class="form-group">
+        <label for="name">Nombre</label>
+        <input type="text" class="form-control" id="name" [(ngModel)]="name" name="name">
+    </div>
+    <div class="form-group">
+        <label for="description">Descripcion</label>
+        <input type="text" id="description" class="form-control" [(ngModel)]="description" name="description">
+    </div>
+    <div class="form-group">
+        <label for="price">Precio</label>
+        <input type="text" id="price" class="form-control" [(ngModel)]="price" name="price">
+    </div>
+    <button class="btn btn-primary" type="submit" (click)="add()">Agregar</button>
+</form>

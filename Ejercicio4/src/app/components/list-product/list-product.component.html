@@ -1,23 +1,21 @@
-<div class="container">
-   <table class="table table-striped table-bordered">
-       <thead>
-           <tr>
-               <th>ID</th>
-               <th>Name</th>
-               <th>Description</th>
-               <th>Price</th>
-               <th>X</th>
-           </tr>
-       </thead>
-       <tbody>
-           <tr *ngFor="let product of productList">
+<table class="table table-striped table-bordered margenes">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>X</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of productList">
             <th>{{product.id}}</th>
             <th>{{product.name}}</th>
             <th>{{product.description}}</th>
             <th>{{product.price}}</th>
             <th><button class="btn-btn-primary" (click)="deleteProduct(product.id)">X</button></th>
-           </tr>
-       </tbody>
+        </tr>
+    </tbody>
 
-   </table>
-</div>
+</table>
